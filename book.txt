@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="book.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Learn How to Fly in 4 Weeks — Digital Guide to Confident Flight</title>
+  <meta name="description" content="Learn How to Fly in 4 Weeks — A practical digital book that takes you from ground basics to confident solo flight in 4 weeks. Includes exercises, checklists and video links.">
+
+  <!-- SEO / Social -->
+  <meta property="og:title" content="Learn How to Fly in 4 Weeks">
+  <meta property="og:description" content="Practical 4-week plan, checklists, and exercises for aspiring pilots. Instant digital download.">
+  <meta property="og:type" content="book">
+  <meta name="twitter:card" content="summary_large_image">
+
+ 
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+        </div>
+        <div class="navlinks">
+          <a href="#features">Features</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#author">Author</a>
+          <a href="#buy" class="cta-link">Buy</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" role="region" aria-label="Hero">
+      <div class="headline">
+        <h1>Learn How to Fly in 4 Weeks</h1>
+		<h2>Unlock the Skills You Need to Soar Safely and Quickly</h2>
+        <p class="subtitle">Don’t Wait — Your Flying Journey Starts Today</p>
+
+        <div class="cta-row">
+          <button class="btn" onclick="openBuy()" aria-label="Buy Now">Buy the Guide — $25</button>
+		  <button class="btn secondary" onclick="openSample()" aria-label="Download free sample">Download Free Sample</button>
+        </div>
+
+
+        <section id="features" class="features" aria-labelledby="features-heading">
+          <h2 id="features-heading">Why this book?</h2>
+          <div class="features-grid">
+            <div class="feature"><strong>Step-by-Step 28-Day Training Program</strong><div class="small muted">A clear, structured plan that guides you from absolute beginner to confident flyer — no prior experience required.</div></div>
+            <div class="feature"><strong>Easy-to-Understand Explanations</strong><div class="small muted">Complex flight concepts are broken down into simple, practical lessons anyone can follow.</div></div>
+            <div class="feature"><strong>Hands-On Exercises & Daily Practice Routines</strong><div class="small muted">Includes daily drills, technique warm-ups, and skill-building activities designed to accelerate your progress.</div></div>
+            <div class="feature"><strong>Visual Diagrams & Learning Aids</strong><div class="small muted">Clear illustrations help you understand every movement, position, and progression step.</div></div>
+            <div class="feature"><strong>Expert Tips for Safe and Controlled Flight</strong><div class="small muted">Learn essential safety principles, best practices, and risk-free techniques to ensure stability and confidence in the air.</div></div>
+            <div class="feature"><strong>Realistic, Achievable Milestones</strong><div class="small muted">Each week includes measurable goals so you can track your growth and see real improvements quickly.</div></div>
+          </div>
+        </section>
+      </div>
+
+      <aside class="cover" aria-hidden="true">
+        <!-- Simple SVG 'book cover' built with HTML to avoid external assets -->
+		<img src="images/digital_book.jpeg" alt="Learn How to Fly in 4 Weeks" style="width:350px;height:450px;">
+      </aside>
+    </section>
+
+    <section id="reviews" aria-labelledby="reviews-heading">
+      <h2 id="reviews-heading">What readers say</h2>
+      <div class="reviews">
+        <figure class="review" aria-label="Review 1">
+          <blockquote>“I never thought flying was something I could learn so quickly. This book simplified everything and gave me the confidence to start lessons. By week three, I was already doing supervised takeoffs!”</blockquote>
+		    <p>⭐⭐⭐⭐⭐</p>
+		  <figcaption class="small muted">— Alex M., First-Time Student Pilot</figcaption>
+        </figure>
+        <figure class="review" aria-label="Review 2">
+          <blockquote>“Clear, encouraging, and truly beginner-friendly. The 4-week structure kept me motivated, and the checklists were incredibly helpful during my intro flights. Highly recommended for anyone curious about becoming a pilot.”</blockquote>
+           <p>⭐⭐⭐⭐⭐</p>
+		 <figcaption class="small muted">— Samantha R., Aviation Enthusiast</figcaption>
+        </figure>
+        <figure class="review" aria-label="Review 3">
+          <blockquote>“As someone who felt overwhelmed by aviation jargon, this book was exactly what I needed. It breaks everything down into bite-sized steps. I’m now well-prepared for ground school thanks to this guide.”</blockquote>
+           <p>⭐⭐⭐⭐</p>
+		 <figcaption class="small muted">— Jordan L., Aspiring Private Pilot</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="author" aria-labelledby="author-heading" style="margin-top:1.25rem">
+      <h2 id="author-heading">About the author</h2>
+      <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
+        <img src="images/alex_carter.jpg" alt="Alex Carter" style="width:200px;height:220px;">
+        <div>
+          <p style="margin:0"><strong>Alex Carter</strong> — Certified flight instructor with over a decade of experience teaching beginners the fundamentals of controlled flight. Having trained hundreds of students, he specializes in simplifying complex concepts and creating step-by-step learning systems that deliver fast, safe, and consistent results. His mission is to make the world of flying accessible to anyone willing to learn.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="buy" aria-labelledby="buy-heading" style="margin-top:1.25rem">
+      <h2 id="buy-heading">Buy the guide</h2>
+      <div class="buy">
+        <div>
+          <div class="price">$25 <span class="small muted"></span></div>
+          <p class="small muted" style="margin:.4rem 0 0">Instant PDF download</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.5rem;align-items:flex-end">
+          <div class="secure"> 
+		  <img src="lock.png" alt="Lock" style="width:25px;height:25px;">
+		  <span class="small muted"> Secure checkout</span></div>
+          <button class="btn" onclick="openBuy()">Buy Now</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;align-items:center">
+        <div class="small muted">© "Learn How to Fly" — All rights reserved</div>
+        <div style="display:flex;gap:1rem;align-items:center">
+          <a href="#" class="small muted">Privacy</a>
+          <a href="#" class="small muted">Terms</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Modal checkout (simulated) -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="dialog">
+      <h3>Secure checkout</h3>
+      <p class="small muted">Enter your email to receive the download link.</p>
+      <div class="form-row">
+        <label class="small muted">Full name</label>
+        <input id="name" type="text" placeholder="Your name">
+      </div>
+      <div class="form-row">
+        <label class="small muted">Email</label>
+        <input id="email" type="email" placeholder="you@example.com">
+      </div>
+      <div style="display:flex;gap:.5rem;justify-content:flex-end;margin-top:.5rem">
+        <button class="btn secondary" onclick="closeModal()">Cancel</button>
+        <button class="btn" onclick="completePurchase()">Pay $25</button>
+      </div>
+      <p id="modalMsg" class="small muted" style="margin-top:.6rem"></p>
+    </div>
+  </div>
+</body>
+</html>

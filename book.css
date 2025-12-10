@@ -1,0 +1,112 @@
+:root{
+      --bg:#f4fbff; /* pale sky */
+      --primary:#0b6bf0; /* sky blue */
+      --accent:#00b39f; /* freedom teal */
+      --muted:#6b7280;
+      --card:#ffffff;
+      --glass: rgba(255,255,255,0.6);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#eaf8ff);color:#0f172a;line-height:1.45}
+    header{position:sticky;top:0;background:rgba(255,255,255,0.75);backdrop-filter:blur(6px);z-index:50;border-bottom:1px solid rgba(11,107,240,0.06)}
+    .container{max-width:1000px;margin:0 auto;padding:1rem}
+    nav{display:flex;gap:1rem;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:.75rem;align-items:center}
+    .logo{width:44px;height:44px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),var(--accent));color:white;font-weight:700}
+    .navlinks a{color:var(--muted);text-decoration:none;padding:.5rem;border-radius:8px}
+    .navlinks a:hover{color:var(--primary);background:rgba(11,107,240,0.05)}
+
+    /* HERO */
+    main{padding:2rem 0}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:2rem;align-items:center}
+    .headline{padding:1rem}
+    h1{font-size:clamp(1.6rem,3.6vw,2.4rem);margin:0 0 .4rem}
+    .eyebrow{color:var(--accent);font-weight:600;font-size:.9rem}
+    .subtitle{color:var(--muted);margin:0 0 1rem}
+    .cta-row{display:flex;gap:.75rem;align-items:center}
+    .btn{background:var(--primary);color:white;padding:.75rem 1.1rem;border-radius:10px;border:0;cursor:pointer;box-shadow:0 6px 18px rgba(11,107,240,0.12);transition:transform .14s ease,box-shadow .14s}
+    .btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(11,107,240,0.16)}
+    .btn.secondary{background:transparent;color:var(--primary);border:1px solid rgba(11,107,240,0.12)}
+
+    /* Book cover */
+    .cover{display:grid;place-items:center}
+    .book{width:230px;height:320px;border-radius:8px;box-shadow:0 12px 40px rgba(2,6,23,0.08);overflow:hidden;background:linear-gradient(180deg,#fff,#f3fbff);position:relative}
+    .book .spine{position:absolute;left:0;top:0;bottom:0;width:28px;background:linear-gradient(180deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;transform:skewY(-6deg)}
+    .book .cover-face{padding:1.2rem 1rem 1rem}
+    .book h2{font-size:1.1rem;margin:0;color:var(--primary)}
+    .book p{font-size:.86rem;color:var(--muted)}
+
+    /* Features */
+    section.features{margin-top:2rem;background:transparent}
+    .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .feature{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 8px 22px rgba(2,6,23,0.04);transition:transform .14s ease}
+    .feature:hover{transform:translateY(-6px)}
+
+    /* Reviews */
+    .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+    .review{background:linear-gradient(180deg,#fff,#fcfeff);padding:1rem;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,0.05);transition:transform .12s ease}
+    .review:hover{transform:translateY(-6px)}
+
+    /* Pricing */
+    .buy{display:flex;gap:1rem;align-items:center;justify-content:space-between;margin-top:1rem;padding:1rem;background:linear-gradient(180deg,rgba(255,255,255,0.9),#fff);border-radius:12px;box-shadow:0 12px 40px rgba(2,6,23,0.05)}
+    .price{font-size:1.6rem;font-weight:700}
+    .secure{display:flex;gap:.5rem;align-items:center;color:var(--muted)}
+
+    footer{padding:2rem 0;color:var(--muted)}
+
+    /* Modal */
+    .modal{position:fixed;inset:0;display:none;place-items:center;background:rgba(3,7,18,0.45);z-index:60}
+    .modal.open{display:grid}
+    .dialog{background:white;padding:1.2rem;border-radius:12px;max-width:420px;width:90%;box-shadow:0 30px 60px rgba(2,6,23,0.3)}
+    .form-row{display:flex;flex-direction:column;gap:.5rem;margin-bottom:.6rem}
+    input[type="text"],input[type="email"]{padding:.7rem;border-radius:8px;border:1px solid #e6eef9}
+
+    /* Responsive */
+    @media(max-width:880px){
+      .hero{grid-template-columns:1fr;grid-auto-rows:auto}
+      .features-grid{grid-template-columns:repeat(2,1fr)}
+      .reviews{grid-template-columns:1fr}
+      .navlinks{display:none}
+    }
+    @media(max-width:480px){
+      .features-grid{grid-template-columns:1fr}
+      .book{width:190px;height:270px}
+    }
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .small{font-size:.86rem}
+    a.cta-link{color:inherit;text-decoration:none}
+	
+	 // Simple interactivity
+    function openBuy(){document.getElementById('modal').classList.add('open');document.getElementById('modal').setAttribute('aria-hidden','false')}
+    function closeModal(){document.getElementById('modal').classList.remove('open');document.getElementById('modal').setAttribute('aria-hidden','true');document.getElementById('modalMsg').textContent=''}
+    function completePurchase(){
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      if(!email || !name){document.getElementById('modalMsg').textContent='Please enter your name and email.';return}
+      // simulate purchase flow and provide a downloadable sample + final file link
+      document.getElementById('modalMsg').textContent='Thank you! A download link has been sent to ' + email + ' (simulated).';
+      setTimeout(()=>{closeModal();alert('SIMULATION: In a real site you would be redirected to payment and then a download link would be provided.')},900)
+    }
+
+    // Free sample: generate a tiny text sample and trigger download
+    function openSample(){
+      const sample = 'Sample excerpt from "Learn How to Fly in 4 Weeks"\n\nWeek 1: Ground basics — checklist overview and first exercises.\n\nPractice logging: 10 minutes daily focusing on basic instrument scan.';
+      const blob = new Blob([sample],{type:'text/plain'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;a.download = 'learn-how-to-fly-sample.txt';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const id = a.getAttribute('href');
+        if(id.length>1){
+          e.preventDefault();
+          document.querySelector(id).scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      })
+    })
